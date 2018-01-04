@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<metainfo>
+  <schemaVersion>2.0</schemaVersion>
+  <application>
+    <name>MYSERVICE</name>
+    <comment>Sample service to show case slide application</comment>
+    <version>1.0.0</version>
+    <exportedConfigs>None</exportedConfigs>
+    <exportGroups>
+      <exportGroup>
+        <name>Servers</name>
+        <exports>
+          <export>
+            <name>host_port</name>
+            <value>${MYSERVICE_HOST}:${site.global.listen_port}</value>
+          </export>
+        </exports>
+      </exportGroup>
+    </exportGroups>
+
+    <components>
+      <component>
+        <name>MYSERVICE</name>
+        <category>MASTER</category>
+        <compExports>Servers-host_port</compExports>
+        <commandScript>
+          <script>scripts/myservice.py</script>
+          <scriptType>PYTHON</scriptType>
+        </commandScript>
+      </component>
+    </components>
+
+    <osSpecifics>
+      <osSpecific>
+        <osType>any</osType>
+        <packages>
+          <package>
+            <type>python</type>
+            <name>files/myservice.py</name>
+          </package>
+        </packages>
+      </osSpecific>
+    </osSpecifics>
+
+  </application>
+</metainfo>
