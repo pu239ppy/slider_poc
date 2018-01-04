@@ -3,7 +3,6 @@
   "metadata": {
   },
   "global": {
-    "application.def": ".slider/package/MYSERVICE/myservice.zip",
     "site.global.listen_port": "${MYSERVICE.ALLOCATED_PORT}{PER_CONTAINER}"
   },
   "components": {
