@@ -35,8 +35,8 @@
         <osType>any</osType>
         <packages>
           <package>
-            <type>python</type>
-            <name>files/myservice.py</name>
+            <type>tarball</type>
+            <name>files/mysvc.tar</name>
           </package>
         </packages>
       </osSpecific>

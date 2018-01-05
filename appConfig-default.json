@@ -3,11 +3,18 @@
   "metadata": {
   },
   "global": {
-    "site.global.listen_port": "${MYSERVICE.ALLOCATED_PORT}{PER_CONTAINER}"
+    "site.global.listen_port": "${MYSERVICE.ALLOCATED_PORT}{PER_CONTAINER}",
+    "site.global.work_root": "${AGENT_WORK_ROOT}",
+    "site.global.pkg_root": "${AGENT_WORK_ROOT}/work/app/definition/package",
+    "application.def": ".slider/package/MYSERVICE/myservice.zip"
+
   },
   "components": {
     "slider-appmaster": {
-      "jvm.heapsize": "256M"
+      "jvm.heapsize": "256M",
+      "slider.hdfs.keytab.dir": ".slider/keytabs",
+      "slider.am.login.keytab.name": "ubuntu.keytab",
+      "slider.keytab.principal.name": "ubuntu@BCPC.EXAMPLE.COM"
     }
   }
 }
