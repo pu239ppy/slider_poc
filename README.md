@@ -34,3 +34,6 @@ ubuntu@bcpc-vm3:~/slider_poc$ slider keytab --list
 2018-01-26 15:33:39,904 [main] INFO  client.SliderClient -      hdfs://Test-Laptop/user/ubuntu/.slider/keytabs/MYSERVICE/ubuntu.keytab
 2018-01-26 15:33:39,906 [main] INFO  util.ExitUtil - Exiting with status 0
 ````
+
+## Run
+create slider_poc  --resources resources-default.json --metainfo metainfo.xml
